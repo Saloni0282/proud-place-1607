@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+      }
+      #nav {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        background: #f40808;
+      }
+      #nav a {
+        font-style: none;
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      #info {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      #info div {
+        border-radius: 9px;
+        padding: 60px;
+        border: 1px solid #f408;
+        background: red;
+        box-shadow: 0px 3px 4px 0.9 rgb(224, 1, 1);
+      }
+      #info div p {
+        font-weight: bold;
+        font-size: 20px;
+        color: grey;
+      }
+      #info div span {
+        color: blue;
+        font-weight: 800;
+        text-shadow: 0px 3px 3px 0.8 blue;
+      }
+      table {
+        text-align: left;
+        width: 80%;
+        margin: auto;
+        margin-top: 40px;
+        border-collapse: collapse;
+
+        border-spacing: 9;
+      }
+      table thead tr {
+        background: #be8b8b;
+        border-bottom: 2px solid black;
+      }
+      table thead th, table tbody td {
+        /* background: #be8b8b; */
+        border-left: 1px solid yellow;
+      }
+      table tbody tr {
+        background: #00b058;
+        border-bottom: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <a href="#">Dashboard</a>
+      <a href="#">Products</a>
+      <a href="#">customers</a>
+      <a href="#">logout</a>
+    </div>
+
+    <div id="info">
+      <div>
+        <p>total customers</p>
+        <span>600</span>
+      </div>
+      <div>
+        <p>total earning</p>
+        <span>$4000</span>
+      </div>
+      <div>
+        <p>total sell</p>
+        <span>6000</span>
+      </div>
+    </div>
+
+    <!-- usrs -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>customer id</th>
+          <th>status</th>
+          <th>details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>fjgabkl</td>
+          <td>9089ufj</td>
+          <td>active</td>
+          <td>;lsdjffknkjfdnv</td>
+        </tr>
+        <tr>
+          <td>fjgabkl</td>
+          <td>9089ufj</td>
+          <td>active</td>
+          <td>;lsdjffknkjfdnv</td>
+        </tr>
+        <tr>
+          <td>fjgabkl</td>
+          <td>9089ufj</td>
+          <td>active</td>
+          <td>;lsdjffknkjfdnv</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

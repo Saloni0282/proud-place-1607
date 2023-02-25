@@ -28,6 +28,6 @@ mongoose.connect('mongodb://localhost/website_tut', () => {
     
 });
 
-app.listen(process.env.port | 5555, () => {
+app.listen(process.env.port | 5556, () => {
     console.log('Server is running');
 });
