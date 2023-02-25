@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="icon" href="image\apni_dukan_logo-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/login.css" />
+</head>
+
+<body>
+    <div class="login_form_container">
+        <div class="login_form">
+            <h2>Login to Best Choice</h2>
+            <div class="input_group">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="Username" class="input_text" autocomplete="off" id="username" />
+            </div>
+            <div class="input_group">
+                <i class="fa fa-unlock-alt"></i>
+                <input type="password" placeholder="Password" class="input_text" autocomplete="off" id="pass" />
+            </div>
+            <div class="button_group" id="login_button">
+                <a>Submit</a>
+            </div>
+            <div class="fotter">
+                <a>Forgot Password ?</a>
+                <a href="home.html">
+                    <img src="image\apni_dukan_logo-removebg-preview.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+
+        let btn = document.getElementById("login_button")
+        btn.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+
+            let userdetail = {
+
+                email: document.getElementById("username").value,
+                password: document.getElementById("pass").value
+
+            }
+
+            const request = require('request');
+
+const options = {
+    url: 'https://reqres.in/api/users',
+    json: true,
+    body: {
+        name: 'John Doe',
+        job: 'Content Writer'
+    }
+};
+
+request.post(options, (err, res, body) => {
+    if (err) {
+        return console.log(err);
+    }
+    console.log(`Status: ${res.statusCode}`);
+    console.log(body);
+});
+        //     try
+        //     fetch("https://pear-crayfish-hat.cyclic.app/users/login",{
+        //         method: "POST",
+        //         headers:{
+        //             "Content-Type": "application/json",
+        //         },
+        //         body: JSON.stringify(userdetail)
+              
+        //     }).then(res=>console.log(res))
+        //     .then(res=>{
+        //         console.log(res)
+        //         // localStorage.setItem("token", res);
+
+        //     }).catch(err=>console.log(err))
+        // }
+        
+        
+        // catch(err){
+        //     alert(err);
+            
+        // }
+            // alert("Login successful");
+        
+        //     fetch("http://localhost:5555/users/login", {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-type": "application/json"
+        //         },
+        //         body: JSON.stringify(userdetail)
+        //     }).then(res => res.json())
+        //         .then(res => {
+        //         console.log(res)
+        //          localStorage.setItem("token",res)
+        //         })
+        //         .catch(err => console.log(err))
+
+        //     alert("login Successful")
+        
+
+
+
+    </script>
+
+
+</body>
+
+</html>
