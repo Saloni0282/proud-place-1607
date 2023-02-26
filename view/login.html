@@ -14,7 +14,7 @@
       href="image\apni_dukan_logo-removebg-preview.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="./css/login.css" />
   </head>
 
   <body>
@@ -75,8 +75,8 @@
             return res.json();
           })
           .then((res) => {
-            if (res.message == "login successful") {
-              alert(res.message);
+            if (res.message == "user already exists") {
+              alert("login successful");
               window.location.href = "index.html";
             } else {
               alert(res.message);
