@@ -14,7 +14,7 @@
 <body>
     <div class="login_form_container">
         <div class="login_form">
-            <h2>Login to Best Choice</h2>
+            <h2>Login to Beauty Hub</h2>
             <div class="input_group">
                 <i class="fa fa-user"></i>
                 <input type="text" placeholder="Username" class="input_text" autocomplete="off" id="username" />
@@ -34,82 +34,44 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
+   
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script >
+ 
+ let btn=document.getElementById("login_button")
+ btn.addEventListener("click", function (event) {
 
-        let btn = document.getElementById("login_button")
-        btn.addEventListener("click", function (event) {
+        event.preventDefault();
 
-            event.preventDefault();
-
-
-            let userdetail = {
+       
+         let userdetail = {
 
                 email: document.getElementById("username").value,
                 password: document.getElementById("pass").value
 
             }
+      
 
-            const request = require('request');
-
-const options = {
-    url: 'https://reqres.in/api/users',
-    json: true,
-    body: {
-        name: 'John Doe',
-        job: 'Content Writer'
-    }
-};
-
-request.post(options, (err, res, body) => {
-    if (err) {
-        return console.log(err);
-    }
-    console.log(`Status: ${res.statusCode}`);
-    console.log(body);
-});
-        //     try
-        //     fetch("https://pear-crayfish-hat.cyclic.app/users/login",{
-        //         method: "POST",
-        //         headers:{
-        //             "Content-Type": "application/json",
-        //         },
-        //         body: JSON.stringify(userdetail)
-              
-        //     }).then(res=>console.log(res))
-        //     .then(res=>{
-        //         console.log(res)
-        //         // localStorage.setItem("token", res);
-
-        //     }).catch(err=>console.log(err))
-        // }
+        fetch("https://pear-crayfish-hat.cyclic.app/users/register",{
+            method:"POST",
+            headers:{
+                "Content-type":"application/json"
+            },
+            body:JSON.stringify(userdetail)
+        }).then(res=>res.json())
+        .then(res=>console.log(res))
+        .catch(err=>console.log(err))
         
-        
-        // catch(err){
-        //     alert(err);
-            
-        // }
-            // alert("Login successful");
-        
-        //     fetch("http://localhost:5555/users/login", {
-        //         method: "POST",
-        //         headers: {
-        //             "Content-type": "application/json"
-        //         },
-        //         body: JSON.stringify(userdetail)
-        //     }).then(res => res.json())
-        //         .then(res => {
-        //         console.log(res)
-        //          localStorage.setItem("token",res)
-        //         })
-        //         .catch(err => console.log(err))
+        alert("login Successful")
+        window.location.href="index.html"; 
 
-        //     alert("login Successful")
-        
+    });
 
 
 
     </script>
+
+
 
 
 </body>
